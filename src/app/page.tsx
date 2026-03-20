@@ -10,8 +10,8 @@ const peptides = [
     aka: "Body Protection Compound",
     category: "Recovery",
     emoji: "🔬",
-    color: "from-emerald-500/20 to-emerald-500/5",
-    border: "border-emerald-500/20 hover:border-emerald-500/40",
+    color: "from-emerald-500/30 to-emerald-900/20",
+    border: "border-emerald-500/30 hover:border-emerald-400/60",
     badge: "bg-emerald-500/10 text-emerald-400",
     benefits: ["Accelerates tendon, ligament & muscle healing", "Protects and heals the gut lining", "Reduces systemic inflammation", "Promotes new blood vessel formation", "Counteracts NSAID-induced gut damage"],
     considerations: ["Most studies are animal-based", "Not FDA-approved for therapeutic use", "Limited long-term human data"],
@@ -23,8 +23,8 @@ const peptides = [
     aka: "Copper Peptide",
     category: "Anti-Aging",
     emoji: "✨",
-    color: "from-violet-500/20 to-violet-500/5",
-    border: "border-violet-500/20 hover:border-violet-500/40",
+    color: "from-violet-500/30 to-violet-900/20",
+    border: "border-violet-500/30 hover:border-violet-400/60",
     badge: "bg-violet-500/10 text-violet-400",
     benefits: ["Stimulates collagen & elastin production", "Reduces wrinkles, fine lines & age spots", "Promotes wound healing & skin repair", "Potent antioxidant properties", "Improves skin thickness & elasticity"],
     considerations: ["Injectable protocols are still emerging", "Effects are gradual (4–12 weeks)", "Quality varies between suppliers"],
@@ -36,8 +36,8 @@ const peptides = [
     aka: "Thymosin Beta-4",
     category: "Performance",
     emoji: "⚡",
-    color: "from-amber-500/20 to-amber-500/5",
-    border: "border-amber-500/20 hover:border-amber-500/40",
+    color: "from-amber-500/30 to-amber-900/20",
+    border: "border-amber-500/30 hover:border-amber-400/60",
     badge: "bg-amber-500/10 text-amber-400",
     benefits: ["Promotes tissue repair & regeneration", "Reduces inflammation & scar tissue", "Improves flexibility & range of motion", "Supports cardiac tissue repair", "Enhances hair regrowth"],
     considerations: ["Banned in competitive sports (WADA)", "Primarily animal model studies", "Theoretical tumor growth concern"],
@@ -49,8 +49,8 @@ const peptides = [
     aka: "GH Secretagogue Stack",
     category: "Longevity",
     emoji: "🧬",
-    color: "from-cyan-500/20 to-cyan-500/5",
-    border: "border-cyan-500/20 hover:border-cyan-500/40",
+    color: "from-cyan-500/30 to-cyan-900/20",
+    border: "border-cyan-500/30 hover:border-cyan-400/60",
     badge: "bg-cyan-500/10 text-cyan-400",
     benefits: ["Stimulates natural growth hormone release", "Improves body composition", "Enhances deep sleep quality", "Supports bone density & joint health", "Anti-aging through natural HGH pathway"],
     considerations: ["Can cause water retention initially", "Requires consistent dosing protocol", "Not a replacement for training & nutrition"],
@@ -62,8 +62,8 @@ const peptides = [
     aka: "GLP-1 Receptor Agonist",
     category: "Metabolic",
     emoji: "🎯",
-    color: "from-rose-500/20 to-rose-500/5",
-    border: "border-rose-500/20 hover:border-rose-500/40",
+    color: "from-rose-500/30 to-rose-900/20",
+    border: "border-rose-500/30 hover:border-rose-400/60",
     badge: "bg-rose-500/10 text-rose-400",
     benefits: ["Clinically proven 15–20% weight reduction", "FDA-approved with massive trial data", "Improves insulin sensitivity", "Reduces cardiovascular risk markers", "Appetite regulation via gut-brain signaling"],
     considerations: ["Common GI side effects early on", "Potential muscle loss without resistance training", "Rebound weight gain if stopped without lifestyle changes"],
@@ -75,8 +75,8 @@ const peptides = [
     aka: "Anti-Obesity Drug Fragment",
     category: "Fat Loss",
     emoji: "🔥",
-    color: "from-orange-500/20 to-orange-500/5",
-    border: "border-orange-500/20 hover:border-orange-500/40",
+    color: "from-orange-500/30 to-orange-900/20",
+    border: "border-orange-500/30 hover:border-orange-400/60",
     badge: "bg-orange-500/10 text-orange-400",
     benefits: ["Stimulates fat breakdown without affecting blood sugar", "Targets fat metabolism specifically", "No impact on IGF-1 levels", "Supports cartilage regeneration", "TGA-approved in Australia"],
     considerations: ["Less clinical data than semaglutide", "Results modest without proper diet", "Not FDA-approved in the US"],
@@ -107,11 +107,11 @@ function PeptideCard({ p }: { p: typeof peptides[0] }) {
               {p.emoji} {p.category}
             </span>
             <h3 className="text-2xl font-bold text-white">{p.name}</h3>
-            <p className="text-sm text-white/40 mt-1">{p.aka}</p>
+            <p className="text-sm text-white/50 mt-1">{p.aka}</p>
           </div>
           <div className="text-right flex-shrink-0">
             <div className="text-3xl font-black text-white/90">{p.score}</div>
-            <div className="text-[10px] text-white/30 uppercase tracking-wider">Score</div>
+            <div className="text-[10px] text-white/40 uppercase tracking-wider">Score</div>
           </div>
         </div>
 
@@ -125,7 +125,7 @@ function PeptideCard({ p }: { p: typeof peptides[0] }) {
           {p.benefits.map((b) => (
             <div key={b} className="flex items-start gap-2.5 text-sm">
               <span className="text-emerald-400 mt-0.5">✓</span>
-              <span className="text-white/70">{b}</span>
+              <span className="text-white/80">{b}</span>
             </div>
           ))}
         </div>
@@ -135,7 +135,7 @@ function PeptideCard({ p }: { p: typeof peptides[0] }) {
           {p.considerations.map((c) => (
             <div key={c} className="flex items-start gap-2.5 text-sm">
               <span className="text-amber-400 mt-0.5">⚠</span>
-              <span className="text-white/50">{c}</span>
+              <span className="text-white/60">{c}</span>
             </div>
           ))}
         </div>
@@ -166,9 +166,9 @@ export default function Home() {
             Bob<span className="text-[#00D4AA]">Tides</span>
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm">
-            <a href="#peptides" className="text-white/50 hover:text-white transition">Peptides</a>
-            <a href="#science" className="text-white/50 hover:text-white transition">Science</a>
-            <a href="#faq" className="text-white/50 hover:text-white transition">FAQ</a>
+            <a href="#peptides" className="text-white/60 hover:text-white transition">Peptides</a>
+            <a href="#science" className="text-white/60 hover:text-white transition">Science</a>
+            <a href="#faq" className="text-white/60 hover:text-white transition">FAQ</a>
             <a href="https://instagram.com/ibrahimdaherr" target="_blank" className="px-5 py-2 bg-[#00D4AA] text-black font-bold text-xs uppercase tracking-wider rounded-full hover:shadow-[0_0_25px_rgba(0,212,170,0.3)] transition-all">
               Follow Bobby
             </a>
@@ -180,8 +180,8 @@ export default function Home() {
       <section className="relative min-h-screen flex items-end pb-24 px-6 pt-16">
         <div className="absolute inset-0">
           <Image src="/images/hero.jpg" alt="" fill className="object-cover" priority />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0F] via-[#0A0A0F]/70 to-[#0A0A0F]/30" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0F]/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0F] via-[#0A0A0F]/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0F]/60 to-transparent" />
         </div>
 
         <div className="relative max-w-7xl mx-auto w-full">
@@ -197,7 +197,7 @@ export default function Home() {
               <span className="bg-gradient-to-r from-[#00D4AA] to-[#00A3FF] bg-clip-text text-transparent">peptide wave.</span>
             </h1>
 
-            <p className="text-lg text-white/50 max-w-lg mb-10 leading-relaxed">
+            <p className="text-lg text-white/60 max-w-lg mb-10 leading-relaxed">
               No bro-science. No hype. Just the data on what peptides actually do for your body, recovery, and longevity — and what they don&apos;t.
             </p>
 
@@ -220,7 +220,7 @@ export default function Home() {
             ].map((s) => (
               <div key={s.label}>
                 <div className="text-2xl font-bold text-white">{s.val}</div>
-                <div className="text-xs text-white/30 mt-1">{s.label}</div>
+                <div className="text-xs text-white/40 mt-1">{s.label}</div>
               </div>
             ))}
           </div>
@@ -235,7 +235,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-4 text-white">
               Know what you&apos;re putting in your body.
             </h2>
-            <p className="text-white/40 leading-relaxed">
+            <p className="text-white/50 leading-relaxed">
               Each peptide profiled with research scores, benefits, considerations, and our honest verdict. No fluff.
             </p>
           </div>
@@ -258,7 +258,7 @@ export default function Home() {
                 Pros vs. cons —<br />
                 <span className="bg-gradient-to-r from-[#00D4AA] to-[#00A3FF] bg-clip-text text-transparent">honestly.</span>
               </h2>
-              <p className="text-white/40 leading-relaxed">
+              <p className="text-white/50 leading-relaxed">
                 We present the research as it stands. For most peptides, the evidence leans heavily positive — the real risks are in sourcing and regulation, not the molecules themselves.
               </p>
             </div>
@@ -311,7 +311,7 @@ export default function Home() {
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3">
                     <span className="text-amber-400 font-bold mt-0.5 flex-shrink-0">–</span>
-                    <span className="text-sm text-white/50">{item}</span>
+                    <span className="text-sm text-white/60">{item}</span>
                   </div>
                 ))}
               </div>
@@ -339,10 +339,10 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Peptides aren&apos;t magic.<br />They&apos;re precision.
               </h2>
-              <p className="text-white/40 leading-relaxed mb-6">
+              <p className="text-white/50 leading-relaxed mb-6">
                 The difference between peptides and everything else? They work with your biology, not against it. No overriding your hormones. No shutting down natural production. Just amplifying what your body already knows how to do.
               </p>
-              <p className="text-white/40 leading-relaxed">
+              <p className="text-white/50 leading-relaxed">
                 Recovery. Skin. Performance. Longevity. Fat loss. Each peptide targets a specific pathway with surgical precision. Know the science, source it right, dose it smart — and let your biology do what it was designed to do.
               </p>
             </div>
@@ -374,7 +374,7 @@ export default function Home() {
                   <span className="text-[#00D4AA] text-xl flex-shrink-0">{faqOpen === i ? "−" : "+"}</span>
                 </button>
                 {faqOpen === i && (
-                  <div className="px-6 pb-5 text-white/40 text-sm leading-relaxed border-t border-white/[0.04] pt-4">
+                  <div className="px-6 pb-5 text-white/50 text-sm leading-relaxed border-t border-white/[0.04] pt-4">
                     {faq.a}
                   </div>
                 )}
@@ -396,7 +396,7 @@ export default function Home() {
               <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Ride the <span className="text-[#00D4AA]">tide.</span>
               </h2>
-              <p className="text-white/50 text-lg max-w-md mx-auto mb-10">
+              <p className="text-white/60 text-lg max-w-md mx-auto mb-10">
                 Daily peptide education, protocol breakdowns, and the latest research. No BS.
               </p>
               <a
@@ -416,9 +416,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <span className="text-xl font-bold">Bob<span className="text-[#00D4AA]">Tides</span></span>
-            <p className="text-white/20 text-sm mt-1">Research-backed peptide education</p>
+            <p className="text-white/30 text-sm mt-1">Research-backed peptide education</p>
           </div>
-          <div className="flex gap-8 text-sm text-white/30">
+          <div className="flex gap-8 text-sm text-white/40">
             <a href="#peptides" className="hover:text-white transition">Peptides</a>
             <a href="#science" className="hover:text-white transition">Science</a>
             <a href="#faq" className="hover:text-white transition">FAQ</a>
@@ -426,7 +426,7 @@ export default function Home() {
           </div>
         </div>
         <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/[0.03]">
-          <p className="text-[11px] text-white/15 text-center max-w-2xl mx-auto">
+          <p className="text-[11px] text-white/20 text-center max-w-2xl mx-auto">
             Disclaimer: Educational purposes only. Nothing on BobTides constitutes medical advice. Consult a qualified healthcare professional before starting any peptide protocol. Individual results vary. © 2026 BobTides.
           </p>
         </div>
