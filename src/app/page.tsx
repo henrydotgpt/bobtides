@@ -186,57 +186,59 @@ export default function Home() {
       </nav>
 
       {/* ═══════════ HERO ═══════════ */}
-      <section className="relative min-h-screen flex items-center pt-16">
-        {/* BG image */}
-        <img
-          src="/images/hero.jpg"
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        {/* Overlays */}
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, #08080D 5%, rgba(8,8,13,0.4) 50%, rgba(8,8,13,0.15) 100%)" }} />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(8,8,13,0.7) 0%, transparent 60%)" }} />
+      <section className="relative min-h-screen flex flex-col pt-16">
+        {/* BG image — top half only */}
+        <div className="relative w-full" style={{ height: "55vh", minHeight: "300px" }}>
+          <img
+            src="/images/hero.jpg"
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(8,8,13,0.2) 0%, #08080D 100%)" }} />
+        </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 w-full py-20">
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8" style={{ background: "rgba(0,212,170,0.12)", border: "1px solid rgba(0,212,170,0.25)" }}>
-              <span className="w-2 h-2 rounded-full bg-[#00D4AA] animate-pulse" />
-              <span className="text-[#00D4AA] text-sm font-medium">Research-Backed Peptide Education</span>
-            </div>
+        {/* Content — below the image on its own dark bg */}
+        <div className="relative bg-[#08080D] flex-1 flex items-start">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full py-10 lg:py-16 -mt-20 relative z-10">
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6" style={{ background: "rgba(0,212,170,0.12)", border: "1px solid rgba(0,212,170,0.25)" }}>
+                <span className="w-2 h-2 rounded-full bg-[#00D4AA] animate-pulse" />
+                <span className="text-[#00D4AA] text-sm font-medium">Research-Backed Peptide Education</span>
+              </div>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] mb-6">
-              Ride the
-              <br />
-              <span style={{ background: "linear-gradient(135deg, #00D4AA, #00A3FF)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-                peptide wave.
-              </span>
-            </h1>
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.08] mb-5 text-white">
+                Ride the{" "}
+                <span style={{ background: "linear-gradient(135deg, #00D4AA, #00A3FF)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+                  peptide wave.
+                </span>
+              </h1>
 
-            <p className="text-lg text-gray-400 max-w-lg mb-10 leading-relaxed">
-              No bro-science. No hype. Just the data on what peptides actually do for your body, your recovery, and your longevity.
-            </p>
+              <p className="text-base sm:text-lg text-gray-400 max-w-lg mb-8 leading-relaxed">
+                No bro-science. No hype. Just the data on what peptides actually do for your body, your recovery, and your longevity.
+              </p>
 
-            <div className="flex flex-wrap gap-4">
-              <a href="#peptides" className="px-8 py-4 bg-[#00D4AA] text-black font-bold rounded-full hover:shadow-[0_0_30px_rgba(0,212,170,0.4)] transition-all text-sm uppercase tracking-wider">
-                Explore Peptides ↓
-              </a>
-              <a href="#science" className="px-8 py-4 rounded-full text-white font-semibold text-sm transition-all" style={{ border: "1px solid rgba(255,255,255,0.15)" }}>
-                The Science →
-              </a>
-            </div>
+              <div className="flex flex-wrap gap-3">
+                <a href="#peptides" className="px-7 py-3.5 bg-[#00D4AA] text-black font-bold rounded-full hover:shadow-[0_0_30px_rgba(0,212,170,0.4)] transition-all text-sm uppercase tracking-wider">
+                  Explore Peptides ↓
+                </a>
+                <a href="#science" className="px-7 py-3.5 rounded-full text-white font-semibold text-sm transition-all hover:bg-white/5" style={{ border: "1px solid rgba(255,255,255,0.2)" }}>
+                  The Science →
+                </a>
+              </div>
 
-            {/* Stats */}
-            <div className="mt-20 grid grid-cols-3 gap-10 max-w-md">
-              {[
-                { v: "7,000+", l: "Published Studies" },
-                { v: "6", l: "Key Peptides" },
-                { v: "85%", l: "Avg Research Score" },
-              ].map((s) => (
-                <div key={s.l}>
-                  <div className="text-2xl font-bold text-white">{s.v}</div>
-                  <div className="text-xs text-gray-500 mt-1">{s.l}</div>
-                </div>
-              ))}
+              {/* Stats */}
+              <div className="mt-12 flex gap-10">
+                {[
+                  { v: "7,000+", l: "Published Studies" },
+                  { v: "6", l: "Key Peptides" },
+                  { v: "85%", l: "Avg Research Score" },
+                ].map((s) => (
+                  <div key={s.l}>
+                    <div className="text-xl sm:text-2xl font-bold text-white">{s.v}</div>
+                    <div className="text-[11px] text-gray-500 mt-1">{s.l}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
