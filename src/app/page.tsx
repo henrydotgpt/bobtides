@@ -97,7 +97,7 @@ function Nav() {
       className="fixed top-0 w-full z-50 bg-[#0C0C0C]/95 backdrop-blur-xl"
       style={{ borderBottom: "1px solid #1a1a1a" }}
     >
-      <div className="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-12 h-16 flex items-center justify-between">
         <a href="#" className="text-xl font-bold tracking-tight text-white">
           BOB<span className="text-[#00D4AA]">TIDES</span>
         </a>
@@ -131,7 +131,7 @@ function Nav() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[#0C0C0C] px-6 pb-6 pt-2" style={{ borderTop: "1px solid #1a1a1a" }}>
+        <div className="md:hidden bg-[#0C0C0C] px-6 sm:px-8 pb-6 pt-2" style={{ borderTop: "1px solid #1a1a1a" }}>
           <div className="flex flex-col gap-4">
             <a href="#peptides" onClick={() => setMenuOpen(false)} className="text-[#ccc] text-base py-2 hover:text-white transition-colors">Peptides</a>
             <a href="#evidence" onClick={() => setMenuOpen(false)} className="text-[#ccc] text-base py-2 hover:text-white transition-colors">Evidence</a>
@@ -164,17 +164,17 @@ function Hero() {
       </div>
 
       {/* Content on solid background */}
-      <div className="bg-[#0C0C0C] px-6 pt-12 pb-20 md:pt-16 md:pb-28">
+      <div className="bg-[#0C0C0C] px-6 sm:px-8 pt-14 pb-24 md:pt-20 md:pb-32">
         <div className="max-w-[800px] mx-auto text-center">
           <p className="text-[#00D4AA] text-xs font-bold uppercase tracking-[5px] mb-5">
             BobTides
           </p>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.08] tracking-tight mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.08] tracking-tight mb-8">
             The peptide
             <br />
             <span className="text-[#00D4AA]">education hub.</span>
           </h1>
-          <p className="text-[#888] text-base sm:text-lg max-w-[520px] mx-auto leading-relaxed mb-10">
+          <p className="text-[#888] text-base sm:text-lg max-w-[520px] mx-auto leading-relaxed mb-12">
             Research-backed profiles on every peptide worth knowing.
             No bro-science. No hype. Just the data.
           </p>
@@ -221,7 +221,7 @@ function PeptideCard({ p }: { p: (typeof peptides)[0] }) {
       className="bg-[#161616] rounded-2xl overflow-hidden hover:bg-[#1a1a1a] transition-colors duration-300 group flex flex-col"
       style={{ border: "1px solid #222" }}
     >
-      <div className="p-6 sm:p-7 flex flex-col flex-1">
+      <div className="p-7 sm:p-8 flex flex-col flex-1">
         {/* Tags */}
         <div className="flex items-center gap-2 mb-4">
           <span className="text-[10px] font-bold uppercase tracking-wider text-[#00D4AA] bg-[#00D4AA]/10 px-3 py-1.5 rounded-md">
@@ -269,10 +269,10 @@ function PeptideCard({ p }: { p: (typeof peptides)[0] }) {
 
 function Evidence() {
   return (
-    <section id="evidence" className="py-16 md:py-24 lg:py-28">
-      <div className="max-w-[1200px] mx-auto px-6">
+    <section id="evidence" className="py-20 md:py-28 lg:py-32">
+      <div className="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-12">
         {/* Header */}
-        <div className="max-w-[600px] mb-12 md:mb-16">
+        <div className="max-w-[600px] mb-14 md:mb-20">
           <p className="text-[#00D4AA] text-xs font-bold uppercase tracking-[4px] mb-3">The Evidence</p>
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">Pros vs. cons — honestly.</h2>
           <p className="text-[#888] leading-relaxed">
@@ -283,7 +283,7 @@ function Evidence() {
 
         <div className="grid md:grid-cols-2 gap-5">
           {/* Pros */}
-          <div className="bg-[#161616] rounded-2xl p-6 sm:p-8" style={{ border: "1px solid #1e3a2f" }}>
+          <div className="bg-[#161616] rounded-2xl p-7 sm:p-9" style={{ border: "1px solid #1e3a2f" }}>
             <div className="flex items-center gap-3 mb-6">
               <span className="w-9 h-9 rounded-lg bg-emerald-500/15 flex items-center justify-center text-emerald-400 text-base font-bold">+</span>
               <h3 className="text-base font-bold text-emerald-400">Supported by research</h3>
@@ -299,7 +299,7 @@ function Evidence() {
           </div>
 
           {/* Cons */}
-          <div className="bg-[#161616] rounded-2xl p-6 sm:p-8" style={{ border: "1px solid #3a2f1e" }}>
+          <div className="bg-[#161616] rounded-2xl p-7 sm:p-9" style={{ border: "1px solid #3a2f1e" }}>
             <div className="flex items-center gap-3 mb-6">
               <span className="w-9 h-9 rounded-lg bg-amber-500/15 flex items-center justify-center text-amber-400 text-base font-bold">&ndash;</span>
               <h3 className="text-base font-bold text-amber-400">Be aware of</h3>
@@ -328,8 +328,8 @@ function Evidence() {
 
 function Explainer() {
   return (
-    <section className="py-16 md:py-24 lg:py-28">
-      <div className="max-w-[1200px] mx-auto px-6">
+    <section className="py-20 md:py-28 lg:py-32">
+      <div className="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-12">
         <div
           className="rounded-2xl overflow-hidden"
           style={{ border: "1px solid #222" }}
@@ -343,7 +343,7 @@ function Explainer() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="bg-[#161616] p-8 sm:p-10 lg:p-14 flex flex-col justify-center">
+            <div className="bg-[#161616] p-8 sm:p-12 lg:p-16 flex flex-col justify-center">
               <p className="text-[#00D4AA] text-xs font-bold uppercase tracking-[4px] mb-4">How They Work</p>
               <h2 className="text-2xl sm:text-3xl font-bold mb-6 leading-tight">
                 Peptides aren&apos;t magic.
@@ -369,9 +369,9 @@ function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-16 md:py-24 lg:py-28">
-      <div className="max-w-[720px] mx-auto px-6">
-        <div className="text-center mb-12 md:mb-14">
+    <section id="faq" className="py-20 md:py-28 lg:py-32">
+      <div className="max-w-[720px] mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="text-center mb-14 md:mb-18">
           <p className="text-[#00D4AA] text-xs font-bold uppercase tracking-[4px] mb-3">FAQ</p>
           <h2 className="text-3xl sm:text-4xl font-bold">Common questions.</h2>
         </div>
@@ -410,8 +410,8 @@ function FAQ() {
 
 function CTA() {
   return (
-    <section className="py-16 md:py-24 lg:py-28">
-      <div className="max-w-[1200px] mx-auto px-6">
+    <section className="py-20 md:py-28 lg:py-32">
+      <div className="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-12">
         {/* Mobile: image then content stacked. Desktop: image as background */}
         <div className="rounded-2xl overflow-hidden" style={{ border: "1px solid #222" }}>
           {/* Image */}
@@ -433,7 +433,7 @@ function CTA() {
             />
             <div className="hidden lg:block absolute inset-0 bg-black/75" />
 
-            <div className="relative bg-[#161616] lg:bg-transparent text-center py-12 sm:py-16 lg:py-24 px-6">
+            <div className="relative bg-[#161616] lg:bg-transparent text-center py-14 sm:py-20 lg:py-28 px-8">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">
                 Follow the <span className="text-[#00D4AA]">tide.</span>
               </h2>
@@ -458,7 +458,7 @@ function CTA() {
 
 function Footer() {
   return (
-    <footer className="py-12 md:py-16 px-6" style={{ borderTop: "1px solid #1a1a1a" }}>
+    <footer className="py-14 md:py-20 px-6 sm:px-8 lg:px-12" style={{ borderTop: "1px solid #1a1a1a" }}>
       <div className="max-w-[1200px] mx-auto">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
@@ -504,9 +504,9 @@ export default function Home() {
       <Hero />
 
       {/* Peptides */}
-      <section id="peptides" className="py-16 md:py-24 lg:py-28">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-10 md:mb-14 gap-4">
+      <section id="peptides" className="py-20 md:py-28 lg:py-32">
+        <div className="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-12 md:mb-16 gap-4">
             <div>
               <p className="text-[#00D4AA] text-xs font-bold uppercase tracking-[4px] mb-3">The Peptides</p>
               <h2 className="text-3xl sm:text-4xl font-bold">Know what you&apos;re taking.</h2>
@@ -516,7 +516,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {peptides.map((p) => (
               <PeptideCard key={p.name} p={p} />
             ))}
